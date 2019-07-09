@@ -1,0 +1,47 @@
+// CSS Way
+@import '~@wordpress/components/build-style/style.css';
+
+// SASS Way
+@import 'css/gutenberg/_colors.scss';
+@import 'css/gutenberg/_variables.scss';
+@import 'css/gutenberg/_mixins.scss';
+@import '~@wordpress/components/src/button/style.scss';
+
+.App {
+
+  header {
+    background: #F7B733;
+    text-align: center;
+    padding: 1em;
+
+    .logo {
+      max-height: 100px;
+    }
+
+    h1 { margin: 0;}
+
+    h2 {
+      font-size: 1.25em;
+    }
+
+    .components-tab-panel__tabs {
+      button {
+        background: $blue-wordpress-700;
+        color: $white;
+        border: none;
+        padding: 1em;
+        cursor: pointer;
+        margin: 0 1em;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  main {
+    display: block;
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+}
