@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gutenberg-components-outside-of-editor/precache-manifest.543255617f80072138d8bf3fd0e416e4.js"
+  "/gutenberg-components-outside-of-editor/precache-manifest.c086db67eccdb2f64b19611e35c5b9af.js"
 );
 
 self.addEventListener('message', (event) => {

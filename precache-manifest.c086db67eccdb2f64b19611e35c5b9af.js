@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1712056474f749630e540e179a18da9b",
+    "revision": "55457e77b8649500267d9b628caaabc3",
     "url": "/gutenberg-components-outside-of-editor/index.html"
   },
   {
