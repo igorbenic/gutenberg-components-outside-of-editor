@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/gutenberg-components-outside-of-editor/static/css/main.40b3eaac.chunk.css",
+    "main.js": "/gutenberg-components-outside-of-editor/static/js/main.99cf8f3e.chunk.js",
+    "main.js.map": "/gutenberg-components-outside-of-editor/static/js/main.99cf8f3e.chunk.js.map",
+    "runtime~main.js": "/gutenberg-components-outside-of-editor/static/js/runtime~main.a3f4783d.js",
+    "runtime~main.js.map": "/gutenberg-components-outside-of-editor/static/js/runtime~main.a3f4783d.js.map",
+    "static/css/2.256e20f1.chunk.css": "/gutenberg-components-outside-of-editor/static/css/2.256e20f1.chunk.css",
+    "static/js/2.035b7068.chunk.js": "/gutenberg-components-outside-of-editor/static/js/2.035b7068.chunk.js",
+    "static/js/2.035b7068.chunk.js.map": "/gutenberg-components-outside-of-editor/static/js/2.035b7068.chunk.js.map",
+    "index.html": "/gutenberg-components-outside-of-editor/index.html",
+    "precache-manifest.543255617f80072138d8bf3fd0e416e4.js": "/gutenberg-components-outside-of-editor/precache-manifest.543255617f80072138d8bf3fd0e416e4.js",
+    "service-worker.js": "/gutenberg-components-outside-of-editor/service-worker.js",
+    "static/css/2.256e20f1.chunk.css.map": "/gutenberg-components-outside-of-editor/static/css/2.256e20f1.chunk.css.map",
+    "static/css/main.40b3eaac.chunk.css.map": "/gutenberg-components-outside-of-editor/static/css/main.40b3eaac.chunk.css.map",
+    "static/media/logo.png": "/gutenberg-components-outside-of-editor/static/media/logo.f91b5c1e.png"
+  }
+}
