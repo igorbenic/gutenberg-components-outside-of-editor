@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55457e77b8649500267d9b628caaabc3",
+    "revision": "138216b7118050199f655f1a99af323a",
     "url": "/gutenberg-components-outside-of-editor/index.html"
   },
   {
-    "revision": "1bd62f3ebf187890872c",
+    "revision": "3c2581e3aef61b84133d",
     "url": "/gutenberg-components-outside-of-editor/static/css/2.256e20f1.chunk.css"
   },
   {
-    "revision": "980aa24d1d89d71699ce",
-    "url": "/gutenberg-components-outside-of-editor/static/css/main.40b3eaac.chunk.css"
+    "revision": "52224b3a1d1a0ea89883",
+    "url": "/gutenberg-components-outside-of-editor/static/css/main.7606a684.chunk.css"
   },
   {
-    "revision": "1bd62f3ebf187890872c",
-    "url": "/gutenberg-components-outside-of-editor/static/js/2.035b7068.chunk.js"
+    "revision": "3c2581e3aef61b84133d",
+    "url": "/gutenberg-components-outside-of-editor/static/js/2.fc78919d.chunk.js"
   },
   {
-    "revision": "980aa24d1d89d71699ce",
-    "url": "/gutenberg-components-outside-of-editor/static/js/main.99cf8f3e.chunk.js"
+    "revision": "52224b3a1d1a0ea89883",
+    "url": "/gutenberg-components-outside-of-editor/static/js/main.35edb87a.chunk.js"
   },
   {
     "revision": "a3cf32c7a46e777e8fde",
