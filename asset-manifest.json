@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gutenberg-components-outside-of-editor/static/css/main.7606a684.chunk.css",
+    "main.css": "/gutenberg-components-outside-of-editor/static/css/main.4b02b53a.chunk.css",
     "main.js": "/gutenberg-components-outside-of-editor/static/js/main.35edb87a.chunk.js",
     "main.js.map": "/gutenberg-components-outside-of-editor/static/js/main.35edb87a.chunk.js.map",
     "runtime~main.js": "/gutenberg-components-outside-of-editor/static/js/runtime~main.a3f4783d.js",
@@ -9,10 +9,10 @@
     "static/js/2.fc78919d.chunk.js": "/gutenberg-components-outside-of-editor/static/js/2.fc78919d.chunk.js",
     "static/js/2.fc78919d.chunk.js.map": "/gutenberg-components-outside-of-editor/static/js/2.fc78919d.chunk.js.map",
     "index.html": "/gutenberg-components-outside-of-editor/index.html",
-    "precache-manifest.2296f732bd03134d62572b62c024fb8e.js": "/gutenberg-components-outside-of-editor/precache-manifest.2296f732bd03134d62572b62c024fb8e.js",
+    "precache-manifest.2b5957c62b9faa2547dd76db6ff962d4.js": "/gutenberg-components-outside-of-editor/precache-manifest.2b5957c62b9faa2547dd76db6ff962d4.js",
     "service-worker.js": "/gutenberg-components-outside-of-editor/service-worker.js",
     "static/css/2.256e20f1.chunk.css.map": "/gutenberg-components-outside-of-editor/static/css/2.256e20f1.chunk.css.map",
-    "static/css/main.7606a684.chunk.css.map": "/gutenberg-components-outside-of-editor/static/css/main.7606a684.chunk.css.map",
+    "static/css/main.4b02b53a.chunk.css.map": "/gutenberg-components-outside-of-editor/static/css/main.4b02b53a.chunk.css.map",
     "static/media/logo.png": "/gutenberg-components-outside-of-editor/static/media/logo.f91b5c1e.png"
   }
 }
