@@ -12,7 +12,7 @@ function ImagePreview( file ) {
     }
 
     if ( typeof file === 'string' ) {
-        return <img src={ file } />;
+        return <img src={ file } alt="Preview" />;
     }
     const url = URL.createObjectURL(file);
      

@@ -12,6 +12,9 @@
 @import '~@wordpress/components/build-style/style.css';
 
 .App {
+  * {
+    box-sizing: border-box;
+  }
 
   header {
     background: #F7B733;
@@ -76,4 +79,43 @@
       margin: 0 auto;
     }
   }
+}
+
+.profile-container {
+  .header {
+    display: flex;
+    align-items: center;
+
+    .image {
+      width: 150px;
+      height: 150px;
+      margin-right: 10px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto;
+      }
+
+      .components-drop-zone__provider {
+        position:relative;
+        min-height: 150px;
+        text-align: center;
+        font-size: 0.875em;
+      }
+
+      .components-placeholder {
+        min-height: 150px;
+      }
+    }
+  }
+  padding-bottom: 1em;
+  border-bottom: 1px solid $light-gray-500;
+  margin-bottom: 1em;
+}
+
+.profile form {
+  padding: 1em;
+  background: $light-gray-100;
 }

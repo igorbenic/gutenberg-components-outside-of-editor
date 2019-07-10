@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { 
-    Notice,
-    Snackbar,
+import {
     NoticeList,
     SnackbarList,
     Button

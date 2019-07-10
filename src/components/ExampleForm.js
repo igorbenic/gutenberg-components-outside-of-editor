@@ -5,7 +5,7 @@ import {
     TextareaControl, 
     RadioControl, 
     CheckboxControl, 
-    SelectControl 
+    SelectControl
 } from '@wordpress/components';
 
 function getComponent( comp ) {
@@ -81,7 +81,7 @@ function getFields( state ) {
     ];
 }
 
-function ExampleForm( { passed_fields = false, onSubmit }) {
+function ExampleForm( { passed_fields = false, onSubmit, onClear }) {
   const [ state, setState ] = useState({ 
       fields: {}, 
       loading:false,
@@ -124,7 +124,13 @@ function ExampleForm( { passed_fields = false, onSubmit }) {
                 Submit
             </Button>
 
-            <Button isDefault onClick={ () => setState({ fields: {} })}>Clear</Button>
+            <Button isDefault onClick={ () => {
+                if ( onClear ) {
+                    onClear();
+                } else {
+                    setState({ fields: {} });
+                }
+            }}>Clear</Button>
         </div>
   </form>);
 }
