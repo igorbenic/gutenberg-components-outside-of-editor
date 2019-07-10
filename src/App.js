@@ -5,6 +5,7 @@ import { TabPanel, SlotFillProvider, Slot, Fill } from '@wordpress/components';
 import ExampleForm from './components/ExampleForm';
 import ExampleNotices from './components/ExampleNotices';
 import ExampleUpload from './components/ExampleUpload';
+import ExampleProfile from './components/ExampleProfile';
 
 function RenderTab( tab ) {
   const tabs = AppTabs();
@@ -36,6 +37,11 @@ function AppTabs() {
       name: 'example3',
       title: 'Example Upload',
       comp: ExampleUpload
+    },
+    {
+      name: 'example4',
+      title: 'Example Profile',
+      comp: ExampleProfile
     }
   ]
 }

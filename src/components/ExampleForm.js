@@ -8,6 +8,17 @@ import {
     SelectControl 
 } from '@wordpress/components';
 
+function getComponent( comp ) {
+    const components = {
+        'TextControl': TextControl,
+        'TextareaControl': TextareaControl,
+        'RadioControl': RadioControl,
+        'CheckboxControl': CheckboxControl,
+        'SelectControl': SelectControl,
+    }
+    return components[ comp ] ? components[ comp ] : TextControl;
+}
+
 function getFields( state ) {
     const fields = state.fields;
     return [
@@ -16,23 +27,23 @@ function getFields( state ) {
             props: {
                 label: 'Name',
                 type: 'text',
-                value: state ? fields.name || '' : ''
+                value: fields ? fields.name || '' : ''
             },
-            comp: TextControl
+            comp: 'TextControl'
         },
         {
             id: 'about',
             props: {
                 label: 'About',
-                value: state ? fields.about || '' : ''
+                value: fields ? fields.about || '' : ''
             },
-            comp: TextareaControl
+            comp: 'TextareaControl'
         },
         {
             id: 'rate',
             props: {
                 label: 'Rate',
-                selected: state ? fields.rate || '1' : '1',
+                selected: fields ? fields.rate || '1' : '1',
                 options: [
                     { label: '1', value: '1' },
                     { label: '2', value: '2' },
@@ -42,13 +53,13 @@ function getFields( state ) {
                 ]
                 
             },
-            comp: RadioControl
+            comp: 'RadioControl'
         },
         {
             id: 'color',
             props: {
                 label: 'Color',
-                selected: state ? fields.color || 'green' : 'green',
+                selected: fields ? fields.color || 'green' : 'green',
                 options: [
                     { label: 'Green', value: 'green' },
                     { label: 'Blue', value: 'blue' },
@@ -56,42 +67,50 @@ function getFields( state ) {
                 ]
                 
             },
-            comp: SelectControl
+            comp: 'SelectControl'
         },
         {
             id: 'terms',
             props: {
                 label: 'Terms',
-                checked: state ? fields.terms || false : false,
+                checked: fields ? fields.terms || false : false,
                 
             },
-            comp: CheckboxControl
+            comp: 'CheckboxControl'
         }
     ];
 }
 
-function ExampleForm() {
+function ExampleForm( { passed_fields = false, onSubmit }) {
   const [ state, setState ] = useState({ 
       fields: {}, 
       loading:false,
   });
-  const fields = getFields( state );
+   
+  const fields = passed_fields ? passed_fields : getFields( state );
  
   return (<form>
         { 
             fields.length && fields.map( ( item, i  ) => {
-   
+                var Component = getComponent( item.comp );
+                var props     = item.props;
+                var changeVal = item.props.valueChange;
+                delete props['valueChange'];
                 return <div key={i} className="field">
-                    <item.comp { ...item.props } onChange={ 
+                    <Component { ...item.props } onChange={ 
                         ( value ) => {
-                            let objectValue = {};
-                            objectValue[ item.id ] = value;
-                            const fields = { ...state.fields, ...objectValue };
-                
-                            setState({
-                                ...state,
-                                ...{ fields: fields }
-                            });
+                            if ( changeVal ) {
+                                changeVal( value )
+                            } else {
+                                let objectValue = {};
+                                objectValue[ item.id ] = value;
+                                const fields = { ...state.fields, ...objectValue };
+                    
+                                setState({
+                                    ...state,
+                                    ...{ fields: fields }
+                                });
+                            }
                         }} />
                 </div>;
             })
@@ -100,7 +119,7 @@ function ExampleForm() {
             <Button 
                 isPrimary
                 focus={ 'undefined' }
-                onClick={ () => { setState( { loading:true } ) } }
+                onClick={ () => { if ( onSubmit ) { onSubmit(); } else { setState( { loading:true } ) } } }
                 isBusy={ state.loading }>
                 Submit
             </Button>

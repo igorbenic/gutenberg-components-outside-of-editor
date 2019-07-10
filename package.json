@@ -6,11 +6,13 @@
   "dependencies": {
     "@wordpress/components": "^8.0.0",
     "@wordpress/postcss-themes": "^2.1.0",
+    "md5": "^2.2.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "reverse-md5": "0.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
