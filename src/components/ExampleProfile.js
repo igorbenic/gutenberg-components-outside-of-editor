@@ -50,7 +50,6 @@ function ProfileAbout( about ) {
     }
     const string =  '<p>' + (about + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1</p><p>$2') + '</p>';
     return <div className="about" dangerouslySetInnerHTML={ {__html: string } }></div>
-    //return <p>{ about }</p>
 }
 
 class ExampleProfile extends React.Component {
