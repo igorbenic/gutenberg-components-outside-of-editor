@@ -3,6 +3,8 @@ import './App.scss';
 import logo from './logo.png';
 import { TabPanel, SlotFillProvider, Slot, Fill } from '@wordpress/components';
 import ExampleForm from './components/ExampleForm';
+import ExampleNotices from './components/ExampleNotices';
+import ExampleUpload from './components/ExampleUpload';
 
 function RenderTab( tab ) {
   const tabs = AppTabs();
@@ -28,12 +30,12 @@ function AppTabs() {
     {
       name: 'example2',
       title: 'Example Notices',
-      comp: 'ExampleNotices'
+      comp: ExampleNotices
     },
     {
       name: 'example3',
       title: 'Example Upload',
-      comp: 'ExampleUpload'
+      comp: ExampleUpload
     }
   ]
 }

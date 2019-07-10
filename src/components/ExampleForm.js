@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
-import { Button, TextControl, TextareaControl, RadioControl, CheckboxControl, SelectControl } from '@wordpress/components';
+import { 
+    Button, 
+    TextControl, 
+    TextareaControl, 
+    RadioControl, 
+    CheckboxControl, 
+    SelectControl 
+} from '@wordpress/components';
 
 function getFields( state ) {
+    const fields = state.fields;
     return [
         {
             id: 'name',
             props: {
                 label: 'Name',
                 type: 'text',
-                value: state ? state.name || '' : ''
+                value: state ? fields.name || '' : ''
             },
             comp: TextControl
         },
@@ -16,7 +24,7 @@ function getFields( state ) {
             id: 'about',
             props: {
                 label: 'About',
-                value: state ? state.about || '' : ''
+                value: state ? fields.about || '' : ''
             },
             comp: TextareaControl
         },
@@ -24,7 +32,7 @@ function getFields( state ) {
             id: 'rate',
             props: {
                 label: 'Rate',
-                selected: state ? state.rate || '1' : '1',
+                selected: state ? fields.rate || '1' : '1',
                 options: [
                     { label: '1', value: '1' },
                     { label: '2', value: '2' },
@@ -40,7 +48,7 @@ function getFields( state ) {
             id: 'color',
             props: {
                 label: 'Color',
-                selected: state ? state.country || 'green' : 'green',
+                selected: state ? fields.color || 'green' : 'green',
                 options: [
                     { label: 'Green', value: 'green' },
                     { label: 'Blue', value: 'blue' },
@@ -54,7 +62,7 @@ function getFields( state ) {
             id: 'terms',
             props: {
                 label: 'Terms',
-                checked: state ? state.terms || false : false,
+                checked: state ? fields.terms || false : false,
                 
             },
             comp: CheckboxControl
@@ -63,7 +71,10 @@ function getFields( state ) {
 }
 
 function ExampleForm() {
-  const [ state, setState ] = useState({});
+  const [ state, setState ] = useState({ 
+      fields: {}, 
+      loading:false,
+  });
   const fields = getFields( state );
  
   return (<form>
@@ -75,15 +86,27 @@ function ExampleForm() {
                         ( value ) => {
                             let objectValue = {};
                             objectValue[ item.id ] = value;
+                            const fields = { ...state.fields, ...objectValue };
+                
                             setState({
                                 ...state,
-                                ...objectValue
+                                ...{ fields: fields }
                             });
                         }} />
                 </div>;
             })
         }
-        <Button isPrimary>Submit</Button>
+        <div className="form-actions">
+            <Button 
+                isPrimary
+                focus={ 'undefined' }
+                onClick={ () => { setState( { loading:true } ) } }
+                isBusy={ state.loading }>
+                Submit
+            </Button>
+
+            <Button isDefault onClick={ () => setState({ fields: {} })}>Clear</Button>
+        </div>
   </form>);
 }
 

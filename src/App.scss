@@ -1,11 +1,15 @@
-// CSS Way
-@import '~@wordpress/components/build-style/style.css';
 
 // SASS Way
 @import 'css/gutenberg/_colors.scss';
+/*
 @import 'css/gutenberg/_variables.scss';
 @import 'css/gutenberg/_mixins.scss';
 @import '~@wordpress/components/src/button/style.scss';
+// PostCSS 
+*/
+
+// CSS Way
+@import '~@wordpress/components/build-style/style.css';
 
 .App {
 
@@ -43,5 +47,32 @@
     max-width: 960px;
     margin: 0 auto;
     padding: 1em;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .components-notice__dismiss {
+    bottom: 0;
+  }
+
+  .components-snackbar-list {
+    bottom: 1em;
+    left: 1em;
+  }
+
+  .components-drop-zone__provider {
+    position:relative;
+    min-height: 200px;
+  }
+
+
+  .components-form-file-upload {
+    button {
+      margin: 0 auto;
+    }
   }
 }
